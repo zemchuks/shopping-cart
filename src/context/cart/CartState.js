@@ -4,10 +4,12 @@ import cartReducer, { sumItems } from './cartReducer'
 import { INCREASE, DECREASE, ADD_ITEM, REMOVE_ITEM, CLEAR, CHECKOUT } from '../types'
 
 const storage = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+
 const CartState = props => {
     const initialState = {
-        products: [],
-        cartItems: storage, ...sumItems(storage)
+        
+        cartItems: storage, ...sumItems(storage),
+        checkout: false 
     }
    
     const [state, dispatch] = useReducer(cartReducer, initialState)
@@ -18,6 +20,25 @@ const CartState = props => {
             payload
         })
     }
+    const decrease = payload => {
+      dispatch({
+        type: DECREASE, 
+        payload
+      })
+  }
+
+      const removeProduct = payload => {
+        dispatch({type: REMOVE_ITEM, payload})
+    }
+
+      const clearCart = () => {
+        dispatch({type: CLEAR})
+    }
+
+    const handleCheckout = () => {
+        console.log(CHECKOUT, state);
+        dispatch({type: CHECKOUT})
+    }
 
       const addProduct = payload => {
         dispatch({
@@ -27,9 +48,13 @@ const CartState = props => {
       }
 
     return <CartContext.Provider value={{ 
-        products: state.products,
+        
         cartItems:  state.cartItems,
         increase,
+        decrease,
+        removeProduct,
+        clearCart,
+        handleCheckout,
         addProduct
     }}>
         {props.children}

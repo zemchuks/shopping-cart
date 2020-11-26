@@ -22,11 +22,13 @@ import { formatNumber } from './utils';
 
                 <div className="text-right">
                 <Link to="/" className="btn btn-link btn-sm mr-2">Details</Link>
-                { isInCart(product) ? 
+                { isInCart(product) && 
                     <button 
                     onClick={() => increase(product)}
                     className="btn btn-outline-primary btn-sm">Add more</button>
-                    : !isInCart(product) && 
+                 } 
+                 {
+                  !isInCart(product) && 
                     <button 
                     onClick={() => addProduct(product)}
                     className="btn btn-primary btn-sm">Add to cart</button>
