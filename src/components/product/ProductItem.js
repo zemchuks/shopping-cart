@@ -9,7 +9,7 @@ import { formatNumber } from './utils';
     const { addProduct, cartItems, increase } = cartContext
 
     const isInCart = product => {
-        return !cartItems.find(item => item.id === product.id);
+        return !!cartItems.find(item => item.id === product.id);
     }
         return (
             <div className='card card-body'>
