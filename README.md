@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ea70a8f4-807b-4526-ad66-df7f5ace6b3e/deploy-status)](https://app.netlify.com/sites/cartproject/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a370122d-1349-4490-b736-1fee06b1ee6c/deploy-status)](https://app.netlify.com/sites/cartassesment/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,4 +9,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This is a React.js application where you can add items to cart, view items in cart, increase items and delete items. Front-end technology is built with React while using context API.
 
 The Project was hosted on Netlify. 
-Demo can be found [Here](https://gentle-waters-77639.herokuapp.com/landing)
+Demo can be found [Here](https://cartassesment.netlify.app/)
