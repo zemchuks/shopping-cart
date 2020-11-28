@@ -7,7 +7,6 @@ const storage = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('
 
 const CartState = props => {
     const initialState = {
-        
         cartItems: storage, ...sumItems(storage),
         checkout: false 
     }
@@ -47,9 +46,9 @@ const CartState = props => {
         })
       }
 
-    return <CartContext.Provider value={{ 
+    return  <CartContext.Provider value={{ 
         
-        cartItems:  state.cartItems,
+        ...state,
         increase,
         decrease,
         removeProduct,
@@ -59,6 +58,7 @@ const CartState = props => {
     }}>
         {props.children}
     </CartContext.Provider>
+    
 }
 
 export default CartState

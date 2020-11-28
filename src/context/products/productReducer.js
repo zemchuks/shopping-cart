@@ -6,7 +6,7 @@ export default (state, action) => {
         case LOAD_ITEMS:
             return {
                 ...state,
-                products: [...action.payload]
+                products: action.payload
             }
        
             default: 
