@@ -9,4 +9,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This is a React.js application where you can add items to cart, view items in cart, increase items and delete items. Front-end technology is built with React while using context API.
 
 The Project was hosted on Netlify. 
-Demo can be found [Click Here](https://cartassesment.netlify.app/)
+Demo can be found [Click Here](https://cartproject.netlify.app/)
