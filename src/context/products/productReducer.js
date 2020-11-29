@@ -1,7 +1,7 @@
 import  { LOAD_ITEMS } from '../types'
 
 
-export default (state, action) => {
+export const ProductReducer = (state, action) => {
     switch(action.type) {
         case LOAD_ITEMS:
             return {

@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import CartContext from './CartContext'
-import cartReducer, { sumItems } from './cartReducer'
+import { CartReducer, sumItems } from './cartReducer'
 import { INCREASE, DECREASE, ADD_ITEM, REMOVE_ITEM, CLEAR, CHECKOUT } from '../types'
 
 const storage = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
@@ -11,7 +11,7 @@ const CartState = props => {
         checkout: false 
     }
    
-    const [state, dispatch] = useReducer(cartReducer, initialState)
+    const [state, dispatch] = useReducer(CartReducer, initialState)
 
       const increase = payload => {
         dispatch({

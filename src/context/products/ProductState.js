@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import ProductContext from './ProductContext'
-import productReducer from './productReducer'
+import { ProductReducer } from './productReducer'
 import { LOAD_ITEMS } from '../types'
 
 const ProductState = props => {
@@ -8,7 +8,7 @@ const ProductState = props => {
         products: []    
     }
    
-    const [state, dispatch] = useReducer(productReducer, initialState)
+    const [state, dispatch] = useReducer(ProductReducer, initialState)
 
      const loadProducts = async () => {        
           const res = await fetch('https://fakestoreapi.com/products');
