@@ -4,7 +4,7 @@ import CartContext from '../../context/cart/CartContext'
 import { formatNumber } from './utils';
 
  const ProductItem = ({product}) => {
-     const [show, setShow] = useState(false)
+    const [show, setShow] = useState(false)
     const cartContext = useContext(CartContext)
 
     const { addProduct, cartItems, increase } = cartContext
@@ -33,7 +33,7 @@ import { formatNumber } from './utils';
                 {show ? <p>{product.description}</p> : null}
                 
 
-                <div className="text-right">
+                <div className="text-center">
                 <Link to="/" onClick={handleHide} className="btn btn-link btn-sm mr-2">Details</Link>
 
                     { isInCart(product) && 
